@@ -41,7 +41,7 @@ jobs:
           dir: '.config/gspread/'
       
       - name: Update NL
-        run: python get_date.py
+        run: python get_data.py
 
       - name: gspread credentials 3
         run: |
