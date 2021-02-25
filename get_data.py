@@ -3,6 +3,7 @@
 import pandas as pd
 import gspread
 # import mygsheet   # just for the first run
+import sys
 
 url = "https://filipvanlaenen.github.io/eopaod/nl-N.csv"
 
