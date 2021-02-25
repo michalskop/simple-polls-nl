@@ -23,7 +23,10 @@ parties_all = parties + [others]
  
 
 # Gsheet
-gc = gspread.service_account()
+if len(sys.argv) > 1:
+    gc = gspread.service_account(sys.argv[1])
+else:
+    gc = gspread.service_account()
 sh0 = gc.open_by_key("1a9zd3ThneSR7JN7-wj4uw5hBBggY9NyguFYIb4jbAc0")
 sh = gc.open_by_key("1iZ0ihiqoMrhRdXfQCzzhAu3Sqk6Ik5gX2u0XCdUfkmQ")
 
