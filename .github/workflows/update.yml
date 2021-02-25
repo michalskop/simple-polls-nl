@@ -39,6 +39,10 @@ jobs:
           name: 'service_account.json'
           json: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           dir: '.config/gspread/'
+      - name: test
+        run: |-
+          cd .config/gspread
+          ls
       
       - name: Update NL
         run: python get_data.py
